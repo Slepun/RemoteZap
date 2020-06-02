@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".About"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/texvViewAbout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/about_about"
+        android:padding="10dp"
+        android:linksClickable="true"
+        android:autoLink="web"
+        android:layout_weight="10"/>
+
+    <Button
+        android:layout_gravity="bottom|center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/licenseBtn"
+        android:textAlignment="center"
+        android:id="@+id/AboutButtonLicense"
+        android:onClick="onClickAboutButtonLicense"
+        android:background="@drawable/green_buttons"
+        android:textColor="#FFFFFF"
+        android:layout_weight="1"/>
+</LinearLayout>

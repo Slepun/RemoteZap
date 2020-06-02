@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">RemoteZap</string>
+
+    <!-- Main menu strings-->
+    <string name="console">Console</string>
+    <string name="therapy">Therapy Management</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <!-- Main menu device status strings-->
+    <string name="deviceStatus">Device connection: </string>
+    <string name="currentThp">Current therapy: </string>
+    <string name="portStatus">Port status: </string>
+    <string name="unknown">Unknown</string>
+    <string name="dev_attached">Device attached</string>
+    <string name="dev_attached_port">Device attached, wrong VID</string>
+    <string name="dev_connected">Device connected</string>
+    <string name="dev_disconnected">Device disconnected</string>
+    <string name="port_closed">Closed</string>
+    <string name="port_open">Open</string>
+    <string name="port_null">Port null</string>
+    <string name="usb_no_grant">USB permission not granted</string>
+    <string name="detectedUsbVID">Detected VID:</string>
+
+
+    <!-- Console strings-->
+    <string name="send">Send</string>
+    <string name="clear">Clear</string>
+
+    <string name="hlpCommand">Type command</string>
+
+
+    <!--Therapy menagement strings-->
+    <string name="thpdevice">"Device: "</string>
+    <string name="thpDescription">"Description: "</string>
+    <string name="thpItemButton">Upload therapy</string>
+
+    <string name="dev_all">all</string>
+    <string name="dev_freepemf" translatable="false">freePEMF</string>
+    <string name="dev_multizap" translatable="false">multiZAP</string>
+    <string name="dev_zapperp" translatable="false">zapper-plus</string>
+    <string name="dev_usr">User therapies</string>
+
+    <!--Therapy strings-->
+    <string name="cleanDevice">"(.*)Devices"</string>
+    <string name="cleanScript">"(.*)Script(.*)"</string>
+
+    <!--Create therapy-->
+    <string name="thpTitle">Title: </string>
+    <string name="thpScriptName">Script name: </string>
+    <string name="thpScript">Script: </string>
+    <string name="thpTitleHint">Type therapy title</string>
+    <string name="thpScriptNameHint">Script name followed by # (e.g. #My Therapy)</string>
+
+    <!--Settings strings-->
+    <string name="usb_device_settings">USB Connection</string>
+    <string name="deviceUsbVID">Arduino VID:</string>
+
+    <!--About strings-->
+    <string name="about_about">Special thanks to <b>mr. Krzysztof</b> - founder of biotronics.eu\n\n
+Software created by <b>Slepun</b>\n\n
+This software allows communication over USB with devices like freePEMF, freePEMF-duo, multiZap and others that use BioZap language interface.\n\n
+  <b>How to use:</b>\n
+  1. Enable OTG function in your android phone\n
+  2. Turn on RemoteZap app \n
+  3. Connect USB cable to freePEMF (or other) device\n
+  4. Connect other side of cable to your phone (you may need USB adapter)\n
+  5. Allow connection\n
+If port status is still closed, you may need to set VID number of your Arduino in Settings\n\n
+For more information about mentioned devices and BioZap language please visit https://biotronics.eu/\n\n
+Library used for USB communication: https://github.com/felHR85/UsbSerial\n\n
+Feature plans: Bluetooth support\n\n
+        Feature plans: Bluetooth support\n\n
+        Feature plans: Bluetooth support\n\n
+        Feature plans: Bluetooth support\n\n
+        Feature plans: Bluetooth support\n\n
+Enjoy!</string>
+
+    <string name="licenseBtn">License</string>
+    <string name="license">MIT License\n\n
+
+Copyright &#169; 2020 Marcin Domagala\n\n
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:\n\n
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.\n\n
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</string>
+
+    <!--Manifest strings-->
+    <string name="serviceDesc">Handle USB connection with freePEMF</string>
+
+    <!--Webparser Biotronika website strings-->
+    <string name="lastPageTitle">"[title=Go to last page]"</string>
+    <string name="webSiteUrl">"https://biotronics.eu/terapie"</string>
+
+    <!-- The class name to the ScrollingChildBehavior required for AppBarLayout -->
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="add_new_thp">ADD</string>
+
+
+</resources>

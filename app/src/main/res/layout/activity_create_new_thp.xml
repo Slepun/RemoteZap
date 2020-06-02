@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CreateNewThpActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical">
+
+    <!--  TITLE  -->
+    <LinearLayout
+        android:id="@+id/crNt_firstLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/crNt_textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thpTitle"/>
+        <EditText
+            android:id="@+id/crNt_edittext_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="80"
+            android:hint="@string/thpTitleHint"/>
+    </LinearLayout>
+
+    <!--  SCRIPT NAME  -->
+    <LinearLayout
+        android:id="@+id/crNt_secondLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/crNt_textview_scrname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thpScriptName"/>
+        <EditText
+            android:id="@+id/crNt_edittext_scrname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="50"
+            android:hint="@string/thpScriptNameHint"/>
+    </LinearLayout>
+
+    <!--  DEVICE  -->
+    <LinearLayout
+        android:id="@+id/crNt_thirdLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/crNt_textview_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thpdevice"/>
+
+        <CheckBox android:id="@+id/crNt_checkbox_freepemf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dev_freepemf"
+            android:onClick="onCheckboxDevClicked"/>
+
+        <CheckBox android:id="@+id/crNt_checkbox_multizap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dev_multizap"
+            android:onClick="onCheckboxDevClicked"/>
+
+        <CheckBox android:id="@+id/crNt_checkbox_zapperp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dev_zapperp"
+            android:onClick="onCheckboxDevClicked"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/crNt_descLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/crNt_textview_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thpDescription"/>
+        <EditText
+            android:id="@+id/crNt_edittext_descbody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/thpDescription"/>
+    </LinearLayout>
+
+    <!--  THERAPY SCRIPT  -->
+    <LinearLayout
+        android:id="@+id/crNt_fourthLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="6">
+        <TextView
+            android:id="@+id/crNt_textview_scrbody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thpScript"/>
+
+        <EditText
+            android:id="@+id/crNt_edittext_scrbody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/thpScript"
+            android:scrollbars="vertical"
+            android:gravity="top" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/crNt_buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:onClick="crNt_btn_onClickAdd"
+        android:text="@string/add_new_thp" />
+</LinearLayout>

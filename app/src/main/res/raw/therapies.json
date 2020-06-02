@@ -1,0 +1,164 @@
+{
+  "therapy": [
+    {
+      "title": "Wirus opryszczki - Herpes general",
+      "author": "kebrzyk",
+      "date": "2019-07-01 21:06",
+      "device": "multiZAP",
+      "description": "Terapia na wirus opryszczki, który od dziś zacząłem testować. Terapie uruchamiać 3 razy, po każdej zrobić 10min przerwy, zatem: terapia 15min->przerwa 10min->terapia 15min->przerwa 10min->terapia 15min. Zapraszam do testowania i feedback'u czy działa.",
+      "script": "#Herpes general\n #15min\n wait 3000\n beep 200\n pbar 100 900\n freq 295000 180\n freq 190000 60\n freq 157700 60\n freq 155000 60\n freq 148900 60\n freq 148800 60\n freq 62900 60\n freq 46400 60\n freq 45000 60\n freq 38300 60\n freq 30400 60\n freq 16500 60\n freq 14100 60\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Sleeping freePEMF",
+      "author": "Krzysiek",
+      "date": "2019-05-29 12:57",
+      "device": "freePEMF",
+      "description": "Skrypt dla zestawu do zabudowanym w łóżku. Wymagane jest rozbudowanie freePEMF duo o moduł RTC i aktualizacji firmware w wersji 2019-05-29 lub nowszej. Instrukcja do tego rozwiązania.rządzenie działa od pierwszego dnia jeśli włączysz je przed godziną 22:00.",
+      "script": "#Sleeping freePEMF\n beep 1000\n pwm 5\n #Start new loop here\n :1\n #turn power sup. on\n blight 1\n pin3 1\n #night\n waitfor 22 00\n blight 0\n pin3 0\n :2 5\n freq 783 120\n chp ~\n jump 2\n waitfor 23 00\n pin3 0\n :3 5\n freq 783 120\n chp ~\n jump 3\n waitfor 00 01\n pin3 0\n :4 5\n freq 783 120\n chp ~\n jump 4\n pin3 1\n waitfor 01 00\n pin3 0\n :5 5\n freq 783 120\n chp ~\n jump 5\n pin3 1\n #startday\n waitfor 3 00\n pin3 0\n :6 10\n freq 783 120\n chp ~\n jump 6\n pin3 1\n waitfor 04 00\n pin3 0\n #start new loop\n waitfor 10 00\n beep 200\n jump 1\n @\n "
+    },
+    {
+      "title": "Przeciwbólowa i przeciwobrzękowa",
+      "author": "Krzysiek",
+      "date": "2018-10-08 09:07",
+      "device": "freePEMF",
+      "description": "Terapia wspomaga skuteczne dostarczanie substancji do miejsca gdzie powstał stan zapalny, np. antybiotyków, leków przeciwzapalnych, przeciwbólowych itp. poprzez poprawę ukrwienia miejsca obrzęku. Pozwala zastosować mniejsze dawki leku przy podobnym skutku.Używać cewki pomarańczowej potrójnie zawiniętej! 3-6 razy dziennie, zależnie od potrzeb. Przykładać cewkę w miejscu opuchlizny. Indukcja magnetyczna: 5,2mT w środku i około 7,5mT na obwodzie cewki. Częstotliwości: 20Hz i 7Hz.",
+      "script": "#Przeciwobrzek 12m\n wait 2000\n pbar 720\n beep 200\n rec 2000 120\n chp 1\n rec 2000 120\n chp 0\n rec 700 120\n chp 1\n rec 700 120\n chp 0\n rec 1000 120\n chp 1\n rec 1000 120\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Implant zębowy - terapia po wszczepieniu",
+      "author": "Krzysiek",
+      "date": "2018-10-07 12:15",
+      "device": "freePEMF",
+      "description": "Stosować przez pierwsze 2 tygodnie po wszczepieniu implantu lub uzupełnieniu ubytku kości. Rozpocząć terapię od trzeciej doby, 2 razy dziennie po 1 godzinie. Terapia przyspiesza osteogenezę w okresie największej wrażliwości założonego implantu lub materiału służącego do odbudowy kości. Zmniejsza opuchliznę i działa przeciwbólowo.Do terapii zastosować aplikator na bazie cewki pomarańczowej potrójnie zwiniętej oraz tłumika 10 om lub aplikator punktowy.",
+      "script": "#Bone growth stimulator\n wait 2000\n # for Ti dental implants\n disp 0\n beep 200\n # 1h 10Hz :  60x60x10\n :2 36000\n #20 impuls.\n freq 200000 -10\n wait 84\n #jump needs ~6 ms\n jump 2\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Kamertony w normalizacji pracy układu trawiennego",
+      "author": "Krzysiek",
+      "date": "2018-08-02 11:22",
+      "device": "freePEMF multiZAP",
+      "description": "To jest przykład jak należy tworzyć terapię elektromagnetycznymi kamertonami. Używać cewki pomarańczowej. Ilość sygnałów dźwiękowych wydanych przez urządzenie wskazuje miejsce, organ do którego należy przyłożyć cewkę. Więcej informacji znajdziesz tu.",
+      "script": "#Kamertony 15min.\n # Watroba\n beep 200\n freq 31783 180\n # Jelita\n beep 100\n wait 300\n beep 100\n freq 28100 180\n # Okreznica\n beep 100\n wait 300\n beep 100\n wait 300\n beep 100\n freq 17600 180\n # Wor. zolciowy\n beep 100\n wait 300\n beep 100\n wait 300\n beep 100\n wait 300\n beep 100\n freq 16430 180\n # Zoladek\n beep 100\n wait 300\n beep 100\n wait 300\n beep 100\n wait 300\n beep 100\n wait 300\n beep 100\n freq 11000 180\n beep 500\n off\n @\n"
+    },
+    {
+      "title": "Antysters i medytacja",
+      "author": "Krzysiek",
+      "date": "2018-07-28 15:18",
+      "device": "freePEMF multiZAP",
+      "description": "Czas trwania 16 min. Cewka zielona lub czerwona przyłożona do głowy lub mata.",
+      "script": "#Antisterss & meditation\n # 16 min.\n freq 1200 20\n freq 1179 150\n chp 1\n freq 1166 20\n freq 1133 20\n freq 1100 20\n freq 1066 20\n freq 1033 20\n freq 1000 20\n freq 966 20\n freq 933 20\n freq 900 20\n freq 866 20\n freq 833 20\n freq 800 20\n chp 0\n freq 800 20\n freq 783 120\n chp 1\n freq 766 20\n freq 733 20\n freq 700 20\n freq 666 20\n freq 633 20\n freq 600 20\n freq 566 20\n freq 533 20\n freq 500 20\n freq 466 20\n freq 433 20\n freq 400 20\n chp 0\n freq 366 20\n freq 333 20\n freq 300 20\n freq 266 20\n freq 233 20\n freq 200 20\n freq 166 20\n freq 130 20\n freq 100 20\n off\n @\n "
+    },
+    {
+      "title": "Świerzb, nużyca, demodekoza",
+      "author": "Krzysiek",
+      "date": "2018-04-25 07:12",
+      "device": "freePEMF multiZAP",
+      "description": "Najlepiej używać multiZAP z elektrodami. Niemniej roztocza świerzbu zagnieżdżają się w okolicach mieszków włosowych, stąd tylko można objąć te miejsca polem EM.Używać cewki pomarańczowej. Nakładając cewkę na głowę, podłącz rezystor 10 omów.W przypadku korzystania z freePEMF konieczna jest wersja oprogramowania 2018-10-21 lub nowsza.freePEMF nie obsługuje częstotliwości 735kHz (Hulda Clark) - ostatni etap terapii. Dla multiZAP usunąć # przed komendą freq. 735kHz działa na multiZAP tylko z cewką żółtą lub elektrodami.Źródło: Podręcznik RIFE'a [2018-04]",
+      "script": "#Swirzeb, nuzyca\n # 36 min\n wait 3000\n beep 200\n freq 9000 1\n scan 11000 180\n freq 25300 120\n freq 69300 600\n freq 70100 120\n freq 77400 120\n freq 92000 120\n freq 143600 120\n freq 287100 120\n freq 574200 120\n freq 182188 180\n #multiZAP tylko\n #freq 73500000 180\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Wirus Epsteina-Barra EBV, przywra trzustki",
+      "author": "Ula",
+      "date": "2018-03-27 19:46",
+      "device": "multiZAP",
+      "description": "Znalazłam informację w książce dr Huldy Clark odnośnie leczenia wirusa EBV poprzez wyelminowanie przywry trzustkowej:\"Wirus Epsteina- Barra (EBV) to tajemnicza choroba, ponieważ stale atakuje mimo wytwarzania przeciwciał. Z moich obserwacji wynika, że EBV pochodzi z przywry trzustkowej (Eurytrema); gdy pacjent nie ma pasożyta, znika też wirus. Po zniszczeniu przywr system immunologiczny potrafi opanować EBV w ciągu jednego dnia, lecz reinfekcja noszącą EBV Eurytremą (wraz ze skażeniem metanolem, który wpuszcza przywrę do trzustki) powoduje nawrót choroby.\"Nie znalazłam żadnych badań odnośnie powiązania EBV z Eurytremą ale często słyszałam o tym, że wirusowi temu towarzyszą pasożyty, więc być może trop jest dobry. Póki co testuję co z tego będzie.Skrypt na podstawie Podręcznika Rife'a.Najlepiej używać z matą i elektrodami jednocześnie.",
+      "script": "#motylica trzustki\n wait 5000\n beep 200\n freq 104194 180\n freq 104355 180\n freq 104678 180\n freq 2096036 180\n freq 42035000 180\n freq 42100000 180\n freq 42230000 180\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Nadnercza 2 - Rownowaga i Normalizacja",
+      "author": "AndyG",
+      "date": "2018-03-11 21:11",
+      "device": "multiZAP",
+      "description": "Nadnercza 2 - Rownowaga i Normalizacja",
+      "script": "#Nadnercza 2-rownowaga i normalizacja\n wait 3000\n pbar 100 900\n beep 300\n beep 300\n freq 2000 180\n freq 53700 180\n freq 133500 180\n freq 225000 180\n freq 1000000 180\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Nadnercza - Równowaga i Normalizacja",
+      "author": "AndyG",
+      "date": "2018-03-10 21:38",
+      "device": "multiZAP",
+      "description": "W książce RIFE'a nie ma opisu do tej terapii. Więc próbujmy",
+      "script": "#Nadnercza-rownowaga i normalizacja\n wait 3000\n pbar 100 900\n freq 2000 180\n freq 53700 180\n freq 133500 180\n freq 225000 180\n freq 1000000 180\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Aktywacja szyszynki",
+      "author": "Krzysiek",
+      "date": "2018-02-06 18:09",
+      "device": "freePEMF multiZAP",
+      "description": "Utworzona na podstawie książki Podręcznik RIFE'a [2018-04]. Używać z matą lub cewką zieloną lub cewką pomarańczową z tłumikiem 20om.",
+      "script": "#Pineal gland 14min\n beep 200\n freq 783 120\n chp 1\n freq 2000 180\n chp 0\n freq 53700 180\n chp 1\n freq 66200 180\n chp 0\n #Pineal activator\n freq 93600 180\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Zaburzenie krążenia obwodowego i szumy uszne",
+      "author": "Krzysiek",
+      "date": "2018-01-06 21:17",
+      "device": "freePEMF",
+      "description": "Zaburzenie krążenia obwodowego. Szumy uszne. 3 x tygodniowo, wieczorem. Opracowano na podstawie Fizykoterapia, wyd. PZWL, Tadeusz Mika i Wojciech Kasprzak, ISBN 978-83-200-4663-2Cewkę pomarańczową przykładać do aorty lub tętnicy szyjnej.",
+      "script": "#Zaburzenia krazenia\n # 16min\n beep 200\n rec 1350 120\n chp 1\n rec 1350 120\n chp 0\n rec 1350 120\n chp 1\n rec 1350 120\n chp 0\n rec 1350 120\n chp 1\n rec 1350 120\n chp 0\n rec 1350 120\n chp 1\n rec 1350 120\n chp 0\n beep 200\n off\n @\n"
+    },
+    {
+      "title": "OOBE wg Bzomy",
+      "author": "Krzysiek",
+      "date": "2017-12-26 12:40",
+      "device": "freePEMF multiZAP",
+      "description": "Zainspirowany odkryciami i książkami lek. med. Jarosława Bzomy, w ramach swojego eksperymentu, przygotowałem 20 minutowy skrypt do \"opuszczania ciała\"i osiągania stanu OOBE (wiki: Out Of Body Experience) Kładziemy się na macie, na prawym boku.",
+      "script": "#OOBE wg Bzomy\n #20min\n wait 3000\n rec 2700 1200\n off\n @\n "
+    },
+    {
+      "title": "Borelioza - część pierwsza",
+      "author": "Krzysiek",
+      "date": "2017-12-10 17:46",
+      "device": "multiZAP",
+      "description": "Terapia została stworzona na podstawie Podręcznika Rife'a. Niemniej proces terapeutyczny jest bardziej złożony i wymaga zmiany programu w jej trakcie. Należy używać kilku programów i je nieustannie zmieniać. Ten skrypt może posłużyć jako początek terapii biorezonansowej. Może on stanowić bazę do opracowania własnego podejścia na bazie literatury fachowej. Należy używać maty.",
+      "script": "#Borlioza 30min\n wait 3000\n pbar 100 1800\n freq 20300 180\n freq 41200 180\n freq 41400 180\n freq 58900 180\n freq 64000 180\n freq 66700 180\n freq 84000 180\n freq 107200 180\n freq 108700 180\n freq 855400 180\n beep 500\n off\n @\n"
+    },
+    {
+      "title": "Astma oskrzelowa",
+      "author": "Krzysiek",
+      "date": "2017-09-23 19:54",
+      "device": "freePEMF multiZAP",
+      "description": "Terapia ma na celu działanie przeciw-obrzękowe i poprawiające drożność dróg oddechowych. Nie wpływa na przyczynę choroby. Głównie jest skuteczna poprzez efekt wazodylatacyjny (zwiększenie objętości układu krwionośnego, polepszenie ukrwienia i skuteczniejsze natlenienie).Terapię stosować należy przez 5 dni, rano i wieczorem. Czas terapii 32 minut należy podzielić na cztery części, tak, aby pokryć całą powierzchnię płuc. Urządzenie odmierza czas i co 8 minut generuje krótki sygnał dźwiękowy. W każdej ćwiartce należy przykładać cewkę do innej części płuc w kolejności zaznaczonej na rysunku. Należy szczególną uwagę zwrócić na ćwiartkę czwartą znajdującą się tuż przed sercem (po lewej stronie). Do terapii należy zastosować cewkę pomarańczową, z podwójnie zwiniętą pętlą (indukcja magnetyczna ok. 3mT).Źródło: NCBI 2017-09",
+      "script": "# Astma oskrzelowa\n # https://www.ncbi.nlm.nih.gov/pubmed/14708875\n # Cewka pomaranczowa ~3mT\n beep 200\n pwm 25\n rec 400 120\n chp 1\n rec 400 120\n chp 0\n rec 400 120\n chp 1\n rec 400 120\n chp 0\n beep 100\n rec 400 120\n chp 1\n rec 400 120\n chp 0\n rec 400 120\n chp 1\n rec 400 120\n chp 0\n beep 100\n rec 400 120\n chp 1\n rec 400 120\n chp 0\n rec 400 120\n chp 1\n rec 400 120\n chp 0\n beep 100\n rec 400 120\n chp 1\n rec 400 120\n chp 0\n rec 400 120\n chp 1\n rec 400 120\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Zwichnięta łapa u psa",
+      "author": "Krzysiek",
+      "date": "2017-04-23 19:43",
+      "device": "freePEMF",
+      "description": "Przyspiesza leczenie i powrót do sprawności po kontuzji zwierzęcia. Wcześniej należy skonsultować kontuzję u weterynarza i wykluczyć zerwanie więzadła lub złamanie [zerwanie więzadła 05-2017], gdyż w tym wypadku konieczna jest interwencja medyczna. Terapia PEMF przyspiesza gojenie i  rehabilitację po zaopatrzeniu złamania lub zbiegu operacyjnym. Cewka pomarańczowa  (3,5mT) lub niebieska (4,4mT) - patrz instrukcja free-PEMF.",
+      "script": "#Zwichniecie\n # 8 minut\n beep 200\n pwm 15\n rec 1000 120\n chp 1\n rec 1000 120\n chp 0\n rec 700 120\n chp 1\n rec 700 120\n beep 400\n off\n @\n "
+    },
+    {
+      "title": "Łokieć tenisisty i golfisty",
+      "author": "Krzysiek",
+      "date": "2017-03-30 21:00",
+      "device": "freePEMF",
+      "description": "Terapia trwająca 3 tygodnie, składająca się z 21 sesji, raz dziennie po 30 minut. Częstotliwości 4,6Hz i 25Hz. Intensywność pola EM według badań klinicznych powinna wynosić 6mT. (60Gs)  Można zastosować cewkę pomarańczową, dwukrotnie zawiniętą i założoną na łokieć (3,5mT) lub dedykowaną niebieską (4,4mT). Nie należy się przejmować nieznacznym zmniejszeniem poziomu indukcji cewek pomarańczowej i niebieskiej w stosunku do opisanej w dokumencie źródłowym. Skuteczność terapii nie zależy liniowo od intensywności aplikowanego pola elektromagnetycznego. Zamiast przez 3 tygodnie po 5 sesji (pon.-pt.) należy stosować przez 3 tygodnie codziennie. Skompensuje to mniejszą \"moc\"cewek. Terapia obniża poziom bólu i przyspiesza regenerację. Efekt można zauważyć już po pierwszej sesji. Źródło: NCBI [03-2017], PDF [biomag.net 03-2017]",
+      "script": "#Lokiec tenisisty\n #http://www.ncbi.nlm.nih.gov/pubmed/16633709\n #cewka pomaranczowa lub niebieska / orange or blue coil ~4mT\n beep 200\n rec 2500 180\n chp 1\n rec 2500 180\n chp 0\n rec 2500 180\n chp 1\n rec 2500 180\n chp 0\n rec 2500 180\n chp 1\n rec 460 180\n chp 0\n rec 460 180\n chp 1\n rec 460 180\n chp 0\n rec 460 180\n chp 1\n rec 460 180\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Rehabilitacja złamań, urazów stawów i wiązadeł",
+      "author": "Krzysiek",
+      "date": "2017-04-23 19:43",
+      "device": "freePEMF multiZAP",
+      "description": "Rehabilitacja po złamaniach i innych kontuzjach. Stosować 2 razy dziennie (rano i wieczorem). Czas trwania 20 minut.Użyj cewki pomarańczowej lub niebieskiej. Załóż na lub przyłóż do kończyny w miejscu urazu. Można cewkę pomarańczową nawinąć podwójnie w przypadku nadgarstków lub stóp. Oprogramowanie freePEMF lub multiZAP musi być co najmniej w wersji: 2018-12-30",
+      "script": "#Rehabilitacja złamań\n pbar 1200\n print Sprain treatment\n wait 2000\n beep 200\n rec\n disp 0\n print Bone growth\n :2 10\n pbar\n # 1min 10Hz :  1x60x10\n :1 600\n #20 impuls.\n freq 200000 -10\n wait 84\n #jump needs ~6 ms\n jump 1\n beep 100\n chp ~\n jump 2\n disp 1\n pbar 1200 50\n print Bone-joint trmnt\n wait 2000\n pwm 20\n freq 1000 120\n chp ~\n freq 1000 120\n chp ~\n freq 700 120\n chp ~\n freq 1500 120\n chp ~\n freq 2000 120\n beep 600\n off\n @\n "
+    },
+    {
+      "title": "Rytm Ziemi",
+      "author": "Krzysiek",
+      "date": "2017-04-23 19:43",
+      "device": "freePEMF multiZAP",
+      "description": "Podstawowe częstotliwości pola geomagnetycznego Ziemi i rezonansu Shumanna. Czas trwania 8 minut. Używać cewki zielonej 50om lub maty. Stosować co najmniej raz dziennie, szczególnie w okresach pogorszenia warunków. Idealna terapia dla meteopatów..Aktualny pomiar częstotliwości Shumanna: rosyjskie obserwatorium - czas Tomsk [11-2018].",
+      "script": "#Rytm Ziemi\n # Czas 8 minut\n beep 200\n rec 1178 120\n chp 1\n rec 1178 120\n chp 0\n rec 783 120\n chp 1\n rec 783 120\n beep 200\n off\n @\n "
+    },
+    {
+      "title": "Bolące plecy",
+      "author": "Krzysiek",
+      "date": "2017-02-28 10:47",
+      "device": "freePEMF multiZAP",
+      "description": "Zastosowanie: bóle krzyża, rwa kulszowa, zapalenie kłębuszków nerwowych. W pierwszej dobie stosować od 6 do 8 razy z przerwą od 30 do 60 minut. W następnych dniach od 3 do 6 razy dziennie. Czas trwania jednej sesji wynosi 16 minut. Stosować przez 7 do 14 dni.Używać cewkę  pomarańczową 0,88mT, którą przykłada się do bolącego miejsca.",
+      "script": "#Bolace plecy\n # Czas 16 minut\n beep 200\n rec 700 120\n chp 1\n rec 200 120\n chp 0\n rec 700 120\n chp 1\n rec 200 120\n chp 0\n rec 1500 120\n chp 1\n rec 2000 120\n chp 0\n rec 700 120\n chp 1\n rec 200 120\n beep 200\n off\n @\n "
+    }
+  ]
+}

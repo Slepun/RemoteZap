@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">RemoteZap</string>
+
+    <!-- Main menu strings-->
+    <string name="console">Konsola</string>
+    <string name="therapy">Zarządzanie terapiami</string>
+    <string name="settings">Ustawienia</string>
+    <string name="about">O aplikacji</string>
+    <!-- Main menu device status strings-->
+    <string name="deviceStatus">Połączenie: </string>
+    <string name="currentThp">Terapia (EEPROM): </string>
+    <string name="portStatus">Status portu:</string>
+    <string name="unknown">Nieznane</string>
+    <string name="dev_attached">Urządzenie podłączone</string>
+    <string name="dev_attached_port">Urządzenie podłączone, zły VID</string>
+    <string name="dev_connected">Urządzenie połączone</string>
+    <string name="dev_disconnected">Urządzenie rozłączone</string>
+    <string name="port_closed">Zamknięty</string>
+    <string name="port_open">Otwarty</string>
+    <string name="port_null">Port null</string>
+    <string name="usb_no_grant">Brak uprawnień USB</string>
+    <string name="detectedUsbVID">Wykryty VID:</string>
+
+
+    <!-- Console strings-->
+    <string name="send">Wyślij</string>
+    <string name="clear">Wyczyść</string>
+
+    <string name="hlpCommand">Wpisz komendę</string>
+
+    <!--Therapy menagement strings-->
+    <string name="thpdevice">"Urządzenie: "</string>
+    <string name="thpDescription">"Opis: "</string>
+    <string name="thpItemButton">Wgraj terapie</string>
+
+        <!--Therapy strings-->
+        <string name="cleanDevice">"(.*)Urządzenie"</string>
+        <string name="cleanScript">"(.*)Skrypt(.*)"</string>
+
+        <!--Create therapy-->
+        <string name="thpTitle">Tytuł: </string>
+        <string name="thpScriptName">Nazwa skryptu: </string>
+        <string name="thpScript">Skrypt: </string>
+        <string name="thpTitleHint">Wpisz tytuł terapi</string>
+        <string name="thpScriptNameHint">Nazwa skryptu poprzedzona #(np. #Moja terapia)</string>
+
+    <!--Settings strings-->
+    <string name="usb_device_settings">Polaczenie USB</string>
+    <string name="deviceUsbVID">Arduino VID:</string>
+
+    <!--About strings-->
+    <string name="about_about">Ogromne podziękowania dla pana <b>Krzysztofa</b> - twórcy projektu biotronika.pl\n
+Autor oprogoramowania: <b>Slepun</b>\n
+Aplikacja umożliwia komunikacje przez USB z urządzaniami: freePEMF, freePEMF-duo, multiZap oraz innymi wspierającymi język BioZap.\n
+Instrukcja:\n
+1. Włącza funkcję OTG w ustawieniach telefonu\n
+2. Włącz aplikacje RemoteZap\n
+3. Podłącz kabel USB do freePEMF\'a (albo innego wspomnianego urządzenia)\n
+4. Podłącz drugi koniec kabla do telefonu (prawdopodobnie potrzebujesz przjeściówki)\n
+5. Zezwól na połączenie (komunikat)\n
+Jeśli status portu jest wciąż zamknięty, należy ustawić VID Arduino w Ustawianiach aplikacji\n\n
+Więcej infomracji o wspomnianych urządzeniach i języku BioZap na: https://biotronika.pl/\n\n
+Biblioteka do komunikacji USB: https://github.com/felHR85/UsbSerial\n\n
+Wkrótce: wsparcie dla Bluetooth\n\n
+Miłego korzystania!</string>
+    <string name="licenseBtn">Licencja</string>
+    <string name="license">MIT License\n\n
+
+Copyright &#169; 2020 Marcin Domagala\n\n
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:\n\n
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.\n\n
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</string>
+
+    <!--Manifest strings-->
+    <string name="serviceDesc">Obsługa połączenia USB z freePEMF</string>
+
+    <!--Webparser Biotronika website strings-->
+    <string name="lastPageTitle">"[title=Przejdź do ostatniej strony]"</string>
+    <string name="webSiteUrl">"https://biotronika.pl/terapie"</string>
+
+    <!-- The class name to the ScrollingChildBehavior required for AppBarLayout -->
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="dev_all">wszystkie</string>
+    <string name="add_new_thp">DODAJ</string>
+    <string name="dev_usr">Terapie użytkownika</string>
+</resources>

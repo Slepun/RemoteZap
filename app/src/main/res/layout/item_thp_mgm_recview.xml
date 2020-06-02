@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fafafa"
+    android:layout_marginBottom="4dp"
+    android:id="@+id/item_thp_mgmLayout">
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:id="@+id/item_thp_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textColor="#000"
+        android:textSize="22sp"
+        tools:text="Sleeping freePEMF" />
+
+    <TextView
+        android:id="@+id/item_thp_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="3dp"
+        android:text="&#8942;"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/item_thp_device"
+        android:layout_below="@id/item_thp_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/thpdevice"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        tools:text="Device:  freePEMF, multiZap" />
+
+    <TextView
+        android:id="@+id/item_thp_description_short"
+        android:layout_below="@id/item_thp_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        android:text="@string/thpDescription"
+        tools:text="Description:  this therapy is about bla bla bla after some point I want to see dots" />
+
+<!-- Affter onClick    -->
+    <TextView
+        android:id="@+id/item_thp_script"
+        android:layout_below="@id/item_thp_description_short"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="1sp"
+        android:visibility="gone"
+        tools:text="Script:\n #Sleeping freePEMF\n
+                    beep 1000\n
+                    pwm 5\n
+                    #Start new loop here\n
+                    :1\n
+                    #turn power sup. on\n
+                    blight 1\n
+                    pin3 1"
+    />
+
+    <ProgressBar
+        android:id="@+id/progressBarSendThp"
+        android:layout_below="@id/item_thp_script"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminate="true"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_below="@id/progressBarSendThp"
+        android:layout_height="wrap_content"
+        android:text="Upload therapy"
+        android:id="@+id/item_thp_uploadThp"
+        android:enabled="true"
+        android:background="@drawable/green_buttons"
+        android:textColor="#FFFFFF"/>
+
+    <View
+        android:id="@+id/item_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="2dp"
+        android:background="#D3D3D3" />
+</RelativeLayout>

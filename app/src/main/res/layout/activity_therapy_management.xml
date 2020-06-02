@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".TherapyManagementActivity"
+    android:id="@+id/thp_main_relative">
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:id="@+id/thp_spinner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thpdevice"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="5sp"
+        android:paddingTop="1sp"/>
+
+    <Spinner
+        android:id="@+id/devFilter_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/thp_spinner_text"
+        android:textSize="18sp"
+        android:paddingBottom="5sp"
+        android:paddingTop="1sp"/>
+
+    <View
+        android:layout_below="@id/thp_spinner_text"
+        android:id="@+id/item_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_margin="2dp"
+        android:padding="5dp"
+        android:background="#FF0000" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBarLoadTherapies"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_toEndOf="@id/devFilter_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <!-- Setup programmatically in TherapyManagementActivity -> ThpMgmRecycleAdapter -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/thpMgmRecview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fafafa"
+            android:layout_below="@id/devFilter_spinner"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/therapy_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="testDescription"
+        android:src="@drawable/ic_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="thp_fab_onClick"
+        app:fabSize="normal"
+        android:background="@drawable/green_buttons"
+        app:backgroundTint="#1EB500"/>
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--        style="@style/ToolBarStyle"-->
+
+    <android.support.v7.widget.Toolbar
+
+        android:id="@+id/mainMenuToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_menu_backgroudnd"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="LOGO STRING"
+            android:src="@drawable/logomenu_new" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="4">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/console"
+            android:id="@+id/menuButtonConsole"
+            android:onClick="onClickMenuButtonConsole"
+            android:background="@drawable/green_buttons"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/therapy"
+            android:id="@+id/menuButtonTherapy"
+            android:onClick="onClickMenuButtonTherapy"
+            android:background="@drawable/green_buttons"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:id="@+id/menuButtonSettings"
+            android:onClick="onClickMenuButtonSettings"
+            android:background="@drawable/green_buttons"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:id="@+id/menuButtonAbout"
+            android:onClick="onClickMenuButtonAbout"
+            android:background="@drawable/green_buttons"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarMainMenu"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="@drawable/border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines = "10"
+                android:minLines="1"
+                android:text="@string/deviceStatus"
+                tools:text="Connection status: "
+                android:textColor="#F00"
+                android:id="@+id/mainMenuTextViewConnectionStatus" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines = "10"
+                android:minLines="1"
+                android:text="@string/unknown"
+                tools:text="STATUS"
+                android:textColor="#F00"
+                android:id="@+id/mainMenuTextViewConnectionStatusVal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines = "10"
+                android:minLines="1"
+                android:text="@string/portStatus"
+                tools:text="Port status: "
+                android:textColor="#F00"
+                android:id="@+id/mainMenuTextViewPortStatus" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines = "10"
+                android:minLines="1"
+                android:text="@string/unknown"
+                tools:text="STATUS"
+                android:textColor="#F00"
+                android:id="@+id/mainMenuTextViewPortStatusVal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines = "10"
+                android:minLines="1"
+                android:text="@string/detectedUsbVID"
+                tools:text="Detected VID: "
+                android:textColor="#F00"
+                android:id="@+id/mainMenuTextViewVid" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines = "10"
+                android:minLines="1"
+                android:text="@string/unknown"
+                tools:text="0x0000"
+                android:textColor="#F00"
+                android:id="@+id/mainMenuTextViewVidVal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines = "10"
+                android:minLines="1"
+                android:text="@string/currentThp"
+                tools:text="Current therapy: "
+                android:textColor="#F00"
+                android:id="@+id/mainMenuTextViewTherapy" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines = "10"
+                android:minLines="1"
+                android:text="@string/unknown"
+                tools:text="THERAPY"
+                android:textColor="#F00"
+                android:id="@+id/mainMenuTextViewTherapyVal" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

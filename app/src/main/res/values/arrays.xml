@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="device_array">
+        <item>@string/dev_all</item>
+        <item>@string/dev_freepemf</item>
+        <item>@string/dev_multizap</item>
+        <item>@string/dev_zapperp</item>
+        <item>@string/dev_usr</item>
+    </string-array>
+</resources>
