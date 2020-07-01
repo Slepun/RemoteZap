@@ -18,7 +18,6 @@ import com.biotronics.remotezap.DeviceStatus.DeviceStatusE;
 import com.felhr.usbserial.UsbSerialDevice;
 import com.felhr.usbserial.UsbSerialInterface;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -203,7 +202,7 @@ public class MyDeviceCommunicationService extends Service {
                                     mDevStatMain.setDeviceStatus(DeviceStatusE.CONNECTED, getResources().getString(R.string.dev_connected));
                                     mDevStatMain.setIsSerialPortOpen(true);
 
-                                    String[] cmd = {"ls"};
+                                    String[] cmd = {"ls\n"};
                                     int[] startingEv = {MyDeviceCommunicationService.LOAD_START};
                                     int[] endingEv = {MyDeviceCommunicationService.LOAD_END,
                                             MyDeviceCommunicationService.UPDATE_DEVICE_STATUS};

@@ -72,12 +72,12 @@ public class DeviceDataSendAsync extends AsyncTask<Void, Integer, Void> {
             int exitCounter = 0;
             do
             {
-                devCom.sendConsoleCmd(data[0]+"\n");
-                waitTime(LONG_WAIT);
+                devCom.sendConsoleCmd("ls\n");
+                waitTime(MID_WAIT);
                 results = devCom.lastDataReceived.split("\n");
                 exitCounter++;
-            } while (!results[0].matches(data[0]) ||
-                     exitCounter >= 20);
+            } while (!results[0].startsWith("#") ||
+                     exitCounter <= 3);
 
             devCom.checkCurrentTherapy();
         }
