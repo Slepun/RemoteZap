@@ -6,9 +6,12 @@ android {
         applicationId "com.biotronics.remotezap"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 3
-        versionName "1.1b"
+        versionCode 4
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    applicationVariants.all { variant ->
+        variant.resValue "string", "versionName", variant.versionName
     }
     sourceSets {
         main {
