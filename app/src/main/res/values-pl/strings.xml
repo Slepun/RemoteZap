@@ -49,6 +49,7 @@
     <string name="deviceUsbVID">Arduino VID:</string>
 
     <!--About strings-->
+    <string name="about_version">Wersja: </string>
     <string name="about_about">Ogromne podziękowania dla pana <b>Krzysztofa</b> - twórcy projektu biotronika.pl\n
 Autor oprogoramowania: <b>Slepun</b>\n
 Aplikacja umożliwia komunikacje przez USB z urządzaniami: freePEMF, freePEMF-duo, multiZap oraz innymi wspierającymi język BioZap.\n

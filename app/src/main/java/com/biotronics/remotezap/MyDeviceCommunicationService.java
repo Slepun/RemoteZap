@@ -268,10 +268,12 @@ public class MyDeviceCommunicationService extends Service {
         String[] lines = lastDataReceived.split("\n", 5);
         for (String line : lines)
         {
-            if (line.matches(".*#.*"))
-            {
+            if (line.matches(".*#.*")) {
                 mDevStatMain.setDeviceTherapy(line);
                 break;
+            } else {
+                String noThpString = getResources().getString(R.string.unknown);
+                mDevStatMain.setDeviceTherapy(noThpString);
             }
         }
 

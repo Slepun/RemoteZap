@@ -56,6 +56,7 @@
     <string name="deviceUsbVID">Arduino VID:</string>
 
     <!--About strings-->
+    <string name="about_version">Version: </string>
     <string name="about_about">Special thanks to <b>mr. Krzysztof</b> - founder of biotronics.eu\n\n
 Software created by <b>Slepun</b>\n\n
 This software allows communication over USB with devices like freePEMF, freePEMF-duo, multiZap and others that use BioZap language interface.\n\n
@@ -69,10 +70,6 @@ If port status is still closed, you may need to set VID number of your Arduino i
 For more information about mentioned devices and BioZap language please visit https://biotronics.eu/\n\n
 Library used for USB communication: https://github.com/felHR85/UsbSerial\n\n
 Feature plans: Bluetooth support\n\n
-        Feature plans: Bluetooth support\n\n
-        Feature plans: Bluetooth support\n\n
-        Feature plans: Bluetooth support\n\n
-        Feature plans: Bluetooth support\n\n
 Enjoy!</string>
 
     <string name="licenseBtn">License</string>

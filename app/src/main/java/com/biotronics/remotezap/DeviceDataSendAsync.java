@@ -75,9 +75,18 @@ public class DeviceDataSendAsync extends AsyncTask<Void, Integer, Void> {
                 devCom.sendConsoleCmd("ls\n");
                 waitTime(MID_WAIT);
                 results = devCom.lastDataReceived.split("\n");
+                if (results.length > 1)
+                {
+                    if (results[0].startsWith("#") || results[1].startsWith("#"))
+                        break;
+                }
                 exitCounter++;
-            } while (!results[0].startsWith("#") ||
-                     exitCounter <= 3);
+            } while (exitCounter < 5);
+            /*!results[0].startsWith("#") ||*
+            TODO: result[0] usually contains prevously sent ls command.
+            Another loop would be necessary to check first few results if they start with #
+             */
+
 
             devCom.checkCurrentTherapy();
         }
